@@ -1,0 +1,14 @@
+Exercise 3 – Processes/Threads
+Answer the following questions briefly:
+-> In which circumstances does it make sense to implement concurrent tasks with threads instead
+of processes?
+-> Which data is contained inside the process control block (PCB) and why?
+-> Compare advantages and disadvantages of different storage types for process/thread control
+blocks: PCBs stored as single scalars; PCBs stored in arrays, lists, trees, and inverted tables?
+-> In which address space are PCBs stored (address space of the PCB's process, of a server
+process, or the kernel itself)? Why?
+-> Describe different kinds of process switches
+-> What is the thread context?
+-> In which cases should process switching be prevented? Why?
+-> How to realize kernel exclusion on a multiprocessor system with interrupts?
+-> Why does the extensive use of interprocess communication result in bad performance?

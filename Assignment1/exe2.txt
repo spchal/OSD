@@ -1,0 +1,7 @@
+Which of the following CPU instructions/actions should be allowed inside the kernel only:
+-> disabling of all interrupts,
+-> reading and modifying data at a (logical) address in an atomic step,
+-> manipulating the page table of another process, and
+-> manipulating the process’ own page table!
+In particular, which of these instructions cannot be made accessible to applications in a secure way?
+Give reasons for each decision.
