@@ -1,11 +1,14 @@
+Most existing designs of operating systems can be classified to be either a macrokernel architecture or
+a microkernel architecture. Discuss both design principles using at least the following sources:
+
 Summary for each work 
 
--> J. Liedtke. Toward real microkernels. Commun. ACM, 39(9):70–77, Sept. 1996. URLs:
+-> J. Liedtke. Toward real microkernels. Commun. ACM, 39(9):70â€“77, Sept. 1996. URLs:
 http://doi.acm.org/10.1145/234215.234473,
 http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.25.9120.
 
 
 -> C. Maeda and B. N. Bershad. Networking performance for microkernels. In Proceedings of
-the Third Workshop on Workstation Operating Systems, pages 154–159, Apr. 1992. URLs:
+the Third Workshop on Workstation Operating Systems, pages 154â€“159, Apr. 1992. URLs:
 http://dx.doi.org/10.1109/WWOS.1992.275670,
-http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.38.3691.
+http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.38.3691.
