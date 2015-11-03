@@ -19,9 +19,11 @@ handling hardware interrupts as IPC messages and including I/O ports in address 
 interrupt but does not handle it, instead generating a message for the user-level process currently associated with the interrupt. Thus, interrupt handling and device I/O are done completely outside of the kernel.
 
 Problems:
-Performance degradation for applications: IPC: At least 73% of the measured penalty is related to IPC or activities
+1. Performance degradation for applications: IPC: At least 73% of the measured penalty is related to IPC or activities
 that are its direct consequence; 10% comes from multiprocessor provisions that could be dropped
 on this uniprocessor; and the remaining 17% is due to unspecified reasons.
+2. Issue with external pager - not flexible - main memory is still managed by the microkernel and can be controlled only rudimentarily by the external pager. However, multimedia file servers, real-time applications, frame buffer management,
+and some nonclassical applications require complete main-memory control.
 
 -> C. Maeda and B. N. Bershad. Networking performance for microkernels. In Proceedings of
 the Third Workshop on Workstation Operating Systems, pages 154–159, Apr. 1992. URLs:
