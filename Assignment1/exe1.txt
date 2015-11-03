@@ -9,13 +9,14 @@ http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.25.9120.
 
 Monolithic: Scheduling, file system, networking, device drivers, memory management, paging, in single kernel
 Microkernel: Minimizing the kernel and implementing servers outside the kernel. Ideally, the kernel implements only
-address spaces, interprocess communication (IPC), and basic scheduling. All servers—even device drivers run in user mode and are treated exactly like any other application by the kernel.
+address spaces, interprocess communication (IPC), and basic scheduling. All servers—even device drivers run in user 
+mode and are treated exactly like any other application by the kernel.
 
 Microkernel First Generation
-Commercial application : Chorus and Mach. Mach had external pager : kernel manages physical and virtual memory but forwards
-page faults to specific user-level tasks. The second conceptual step toward microkernels was the idea of handling hardware interrupts as IPC messages and including I/O ports in address spaces. The kernel captures the interrupt but does
-not handle it, instead generating a message for the user-level process currently associated with the interrupt.
-Thus, interrupt handling and device I/O are done completely outside of the kernel.
+Commercial application : Chorus and Mach. Mach had external pager : kernel manages physical and virtual memory but
+forwards page faults to specific user-level tasks. The second conceptual step toward microkernels was the idea of 
+handling hardware interrupts as IPC messages and including I/O ports in address spaces. The kernel captures the 
+interrupt but does not handle it, instead generating a message for the user-level process currently associated with the interrupt. Thus, interrupt handling and device I/O are done completely outside of the kernel.
 
 Problems:
 Performance degradation for applications: IPC: At least 73% of the measured penalty is related to IPC or activities
