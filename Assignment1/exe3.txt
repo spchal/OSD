@@ -1,14 +1,66 @@
-Exercise 3 � Processes/Threads
+Exercise 3 – Processes/Threads
 Answer the following questions briefly:
+
 -> In which circumstances does it make sense to implement concurrent tasks with threads instead
 of processes?
+when a program can do more than one task at a time or it can be divided into parallel task(not a sequential process),then it make sense to implement tasks with threads.
+
+
 -> Which data is contained inside the process control block (PCB) and why?
+
+process state(which characterize the behaviour of processes); 
+Process ID
+program counter, CPU reigister(these need to be saved and restored when swapping processes in and out of the CPU)
+CPU scheduling information(such as priority information and pointers to scheduling queues) 
+Memory-management information(E.g.page tables or segment tables) 
+Accounting information(user and kernel CPU time consumed, account numbers,limits,etc.)
+I/O status information(Devices allocated, open file tables,etc)
+
 -> Compare advantages and disadvantages of different storage types for process/thread control
 blocks: PCBs stored as single scalars; PCBs stored in arrays, lists, trees, and inverted tables?
+
+single scalars:
+Adv:quick in reading and writing data.
+Dis:waste of store space
+
+arrays:
+Adv: easy to implement , we dont need to need extra store space to indicate the relationship between different TCBs. random read or write from TCBs according to TCBs’s number,high efficient.
+DIS:1.need to previous allocate enough store space, if allocate too much, it will lead to a waste of space. if allocate not enough space, the overflow will happen.
+ 2.when we want insert or delete a TCB, we need to move average half of blocks, so the efficient of insert or delete in array is low
+
+Lists: contrary to array.
+
+Tree:
+Adv: flexible in insert and delete data, save store space. 
+DIS：waste of time in searching data.
+
+Inverted table:
+Adv:save the store space of every table
+Dis:waste of time in searching table
+
+
+
 -> In which address space are PCBs stored (address space of the PCB's process, of a server
 process, or the kernel itself)? Why?
+In kernel, PCBs is a data structure in the operating system kernel.
+
 -> Describe different kinds of process switches
+
+automatic switching:using a clock(timer) to offer the functions like specifying a deadline or interrupt on timeout.
+Conditioned switching:whether switching takes place or not depends on some condition.
+
+
 -> What is the thread context?
+
+the complete thread specific information stored in the processor in called thread context.
+
 -> In which cases should process switching be prevented? Why?
+
+When using automatic switching, which is triggered by an external signal, we have no control of
+place and time of switching.It can happen that switching is triggered at exactly the time when a (voluntary) switching is just taking place. This can lead to unwanted behavior and errors.
+
 -> How to realize kernel exclusion on a multiprocessor system with interrupts?
+
+In a multiprocessor systems we may disable interrupts for the duration of ther kernel operation and using kernel lock
+
 -> Why does the extensive use of interprocess communication result in bad performance?
