@@ -29,3 +29,8 @@ and some nonclassical applications require complete main-memory control.
 the Third Workshop on Workstation Operating Systems, pages 154–159, Apr. 1992. URLs:
 http://dx.doi.org/10.1109/WWOS.1992.275670,
 http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.38.3691.
+
+*some argue that critical tasks should all reside at the kernel level (monolothickernel approach)
+*the lack of performance of network protocols on microkernel systems is due to the approach, where the protocols reside at the user level
+*the structure of the protocol and not the location is what defines the performance of the protocol
+*a well structured and optomized protocol that reside at user level on mikrokernel system perform as good as a protocol in a monolithickernel
