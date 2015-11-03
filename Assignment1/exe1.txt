@@ -25,6 +25,14 @@ on this uniprocessor; and the remaining 17% is due to unspecified reasons.
 2. Issue with external pager - not flexible - main memory is still managed by the microkernel and can be controlled only rudimentarily by the external pager. However, multimedia file servers, real-time applications, frame buffer management,
 and some nonclassical applications require complete main-memory control.
 
+
+Second generation:
+main memory is still managed by the microkernel and can be controlled only rudimentarily by the
+external pager. However, multimedia file servers, real-time applications, frame buffer management,
+and some nonclassical applications require complete main-memory control
+Problem was main architecture of these kernels. 
+Then other architecture designs like exokernel and L4 came. 
+
 -> C. Maeda and B. N. Bershad. Networking performance for microkernels. In Proceedings of
 the Third Workshop on Workstation Operating Systems, pages 154–159, Apr. 1992. URLs:
 http://dx.doi.org/10.1109/WWOS.1992.275670,
