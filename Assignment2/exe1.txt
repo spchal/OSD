@@ -1,0 +1,13 @@
+User Level Threads vs. Kernel Level Threads
+
+The concept of threads can be realized at kernel level or at user level. (Not to be confused with letting
+threads run with or without kernel privileges.)
+What are advantages/disadvantages of realizing threads at user level instead of kernel level?
+A mixture of both principles is outlined in the following paper:
+• J. Liedtke, H. Wenske. “Lazy process switching,” Proceedings of the Eighth Workshop on Hot
+Topics in Operating Systems, pages 15-18, 2001. URL:
+http://dx.doi.org/10.1109/HOTOS.2001.990055,
+http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.25.4114
+How does this approach realize threads, thread control blocks and context switches between threads?
+What are the advantages and disadvantages of this approach compared to pure user or kernel level
+threads?

@@ -1,0 +1,11 @@
+Scheduling Strategies
+Answer the following questions briefly:
+- Given that the task's service time is not known in advance. How to approximate the shortest
+job next strategy as close as possible?
+- In proportional share scheduling, a weight is assigned to each task. What is the goal of this
+weighting?
+- How many processes are at least necessary to suffer from the problem of priority inversion?
+How to solve this problem?
+- Why should younger values of thread's execution time obtain more weight for the estimation
+of CPU burst? Why are outliers better filtered by a small weight alpha?
+- Why are I/O-intensive tasks more preferred to execute first?

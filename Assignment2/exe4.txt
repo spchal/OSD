@@ -1,0 +1,11 @@
+Real-time Scheduling
+Given the processes A to C with the periods and service times in Table 1, is it possible to create a
+schedule with EDF and/or RMS for a hard real-time system, i. e., without violating any
+periods/deadlines? Can you make this decision without actually creating a schedule?
+If it is possible, give concrete schedules for EDF and RMS! It should be clearly visible at which point
+in time which process is executed. If it is not possible, show why!
+Process Period Service time
+A 10 2
+B 12 3
+C 15 6
+Table 1: Periods and service times

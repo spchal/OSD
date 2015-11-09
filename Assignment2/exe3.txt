@@ -1,0 +1,14 @@
+Processor Utilization
+Let processor utilization U be defined as the quotient of the minimally necessary time and the actual
+time used for process execution. Further, let T denote the number of time units until a process is
+blocked because of an I/O operation, and S the number of time units needed for a context switch.
+Devise a formula for the processor utilization U in case of round robin scheduling with a time-slice of
+t time units!
+Interpret your formula for the following values of t:
+- t->infinity ,
+- S<t<T ,
+- t=S , and
+- t->0 !
+What would be your recommendation for the length of the time-slice? Why?
+Hint: The “minimally necessary time” is equal to the service time, i. e., it does not include time used
+for context switches. Furthermore, assume that there are always processes ready to run.
