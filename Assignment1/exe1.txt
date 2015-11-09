@@ -1,11 +1,44 @@
+Most existing designs of operating systems can be classified to be either a macrokernel architecture or
+a microkernel architecture. Discuss both design principles using at least the following sources:
+
 Summary for each work 
 
--> J. Liedtke. Toward real microkernels. Commun. ACM, 39(9):70–77, Sept. 1996. URLs:
+-> J. Liedtke. Toward real microkernels. Commun. ACM, 39(9):70â€“77, Sept. 1996. URLs:
 http://doi.acm.org/10.1145/234215.234473,
 http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.25.9120.
 
+Monolithic: Scheduling, file system, networking, device drivers, memory management, paging, in single kernel
+Microkernel: Minimizing the kernel and implementing servers outside the kernel. Ideally, the kernel implements only
+address spaces, interprocess communication (IPC), and basic scheduling. All serversâ€”even device drivers run in user 
+mode and are treated exactly like any other application by the kernel.
+
+Microkernel First Generation
+Commercial application : Chorus and Mach. Mach had external pager : kernel manages physical and virtual memory but
+forwards page faults to specific user-level tasks. The second conceptual step toward microkernels was the idea of 
+handling hardware interrupts as IPC messages and including I/O ports in address spaces. The kernel captures the 
+interrupt but does not handle it, instead generating a message for the user-level process currently associated with the interrupt. Thus, interrupt handling and device I/O are done completely outside of the kernel.
+
+Problems:
+1. Performance degradation for applications: IPC: At least 73% of the measured penalty is related to IPC or activities
+that are its direct consequence; 10% comes from multiprocessor provisions that could be dropped
+on this uniprocessor; and the remaining 17% is due to unspecified reasons.
+2. Issue with external pager - not flexible - main memory is still managed by the microkernel and can be controlled only rudimentarily by the external pager. However, multimedia file servers, real-time applications, frame buffer management,
+and some nonclassical applications require complete main-memory control.
+
+
+Second generation:
+main memory is still managed by the microkernel and can be controlled only rudimentarily by the
+external pager. However, multimedia file servers, real-time applications, frame buffer management,
+and some nonclassical applications require complete main-memory control
+Problem was main architecture of these kernels. 
+Then other architecture designs like exokernel and L4 came. 
 
 -> C. Maeda and B. N. Bershad. Networking performance for microkernels. In Proceedings of
-the Third Workshop on Workstation Operating Systems, pages 154–159, Apr. 1992. URLs:
+the Third Workshop on Workstation Operating Systems, pages 154â€“159, Apr. 1992. URLs:
 http://dx.doi.org/10.1109/WWOS.1992.275670,
-http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.38.3691.
+http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.38.3691.
+
+*some argue that critical tasks should all reside at the kernel level (monolothickernel approach)
+*the lack of performance of network protocols on microkernel systems is due to the approach, where the protocols reside at the user level
+*the structure of the protocol and not the location is what defines the performance of the protocol
+*a well structured and optomized protocol that reside at user level on mikrokernel system perform as good as a protocol in a monolithickernel
